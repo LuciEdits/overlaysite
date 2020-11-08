@@ -28,6 +28,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
   margin: 0;
@@ -144,6 +148,11 @@ nav img {
   to {opacity: 100%; top: 0px;}
 }
 
+#toggle {
+    display: none;
+}
+
+
 #hlogo {
   width: 60%;
   display: block;
@@ -251,7 +260,7 @@ footer a:visited {color: var(--foota); text-decoration: none;}
   }
   .navlinks {
     position: fixed;
-    background: var(--navfootbg);
+    background: var(--navbg);
     height: 100vh;
     width: 100%;
     align-items: center;

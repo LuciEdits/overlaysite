@@ -35,9 +35,9 @@
       <nav id="navbar">
         <!-- <img src="images/site-elements/seventownfavicon.png" alt="home logo"> -->
         <ul class="navlinks">
-          <li> Home </li>
-          <li> Downloads </li>
-          <li> Troubleshooting/FAQ </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="downloads/index.html">Downloads</a></li>
+          <li><a href="troubleshooting/index.html">Troubleshooting/FAQ</a> </li>
         </ul>
         <div class="hamburger">
           <div class="line"></div>
@@ -46,9 +46,9 @@
         </div>
       </nav>
       <div id="header-no-nav">
-        <img src="images/site-elements/bridgeoverlay.png" alt="header logo" id="hlogo">
+        <img src="images/site-elements/bridgeoverlays.png" alt="header logo" id="hlogo">
         <a href="#scrollto">
-        <div class="scrolldown" id="disappearonscroll">
+        <div class="scrolldown">
           <span></span>
           <span></span>
           <span></span>
@@ -98,24 +98,17 @@
         navLinks.classList.toggle("open");
       })
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-      jQuery($ => {
-        // The speed of the scroll in milliseconds
-        const speed = 1000;
-    
-        $('a[href*="#"]')
-          .filter((i, a) => a.getAttribute('href').startsWith('#scrollto') || a.href.startsWith(`${location.href}#`))
-          .unbind('click.smoothScroll')
-          .bind('click.smoothScroll', event => {
-            const targetId = event.currentTarget.getAttribute('href').split('#')[1];
-            const targetElement = document.getElementById(targetId);
-    
-            if (targetElement) {
-              event.preventDefault();
-              $('html, body').animate({ scrollTop: $(targetElement).offset().top }, speed);
-            }
-          });
-      });
+    <script>
+      $('body').scroll(function() {
+        // scroll disatance
+        if($(this).scrollTop() >= 100){
+          $('.scrolldown').hide();
+        }
+        else{
+          $('.scrolldown').show();
+        }    
+
+});
     </script>
   </body>
 </html>
