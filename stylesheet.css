@@ -7,7 +7,7 @@
     --navbg: #272E7A;
     --footbg: #911E16;
     --navtext: white;
-    --foottext: white;
+    --foottext: #F5B7B6;
     --head1: #2c3e50;
     --head2: #2c3e50;
     --head3: #2c3e50;
@@ -22,10 +22,9 @@
     --nava: white;
     --navaactive: #ecf0f1;
     --navahover: #95a5a6;
-    --foota: #bdc3c7;
+    --foota: #EBC9CB;
     --footaactive: #ecf0f1;
-    --footahover: #95a5a6;
-
+    --footahover: #E8ADAC;
 }
 
 html {
@@ -154,7 +153,7 @@ nav img {
 }
 
 
-#hlogo {
+.hlogo {
   width: 60%;
   display: block;
   margin-left: auto;
@@ -164,10 +163,12 @@ nav img {
   animation-duration: 1.5s;
   transition: all .2s ease-in-out;
 }
-#hlogo:hover {
+.hlogo:hover {
   transform: scale(1.1);
 }
-
+#headermobile {
+    display: none;
+}
 
 main {
   display: block;
@@ -233,7 +234,7 @@ footer {
   padding-bottom: 50px;
   background-color: var(--footbg);
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   color: var(--foottext);
   font-family: "Catamaran", sans-serif;
   font-size: 12pt;
@@ -304,7 +305,25 @@ footer a:visited {color: var(--foota); text-decoration: none;}
     border-top: 8vh solid #160030;
 
   }
+  #headermobile {
+      display: inline-block;
+  }
+  #headerdesktop {
+      display: none;
+  }
   main {
     width: 80%;
+  }
+  main p {
+    font-size: 20pt;
+  }
+  main h1 {
+      font-size: 24pt;
+  }
+  main h2 {
+      font-size: 23pt;
+  }
+  main h3 {
+      font-size: 22pt;
   }
 }
