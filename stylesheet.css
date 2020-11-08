@@ -19,7 +19,7 @@
     --maina: ;
     --mainaactive: ;
     --mainahover: ;
-    --nava: #bdc3c7;
+    --nava: white;
     --navaactive: #ecf0f1;
     --navahover: #95a5a6;
     --foota: #bdc3c7;
@@ -97,6 +97,7 @@ nav img {
     width: 40px;
     height: 40px;
     transform: translateY(-80px) translateX(-50%) rotate(45deg);
+    transition-duration: 1s;
 }
  .scrolldown span {
      position: absolute;
