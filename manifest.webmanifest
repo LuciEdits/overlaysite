@@ -1,0 +1,17 @@
+{
+    "short_name": "Bridge Overlay",
+    "name": "The Bridge Overlay Pack",
+    "description": "The Bridge Overlay Pack by ApplePies",
+    "icons": [
+      {
+        "src": "/images/site-elements/favicon.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/site-template.html",
+    "background_color": "blue",
+    "display": "browser",
+    "scope": "/",
+    "theme_color": "blue"
+  }

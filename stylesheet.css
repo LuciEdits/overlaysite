@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Catamaran");
+
+:root {
+    --navbg: #3498db;
+    --footbg: #e74c3c;
+    --navtext: white;
+    --foottext: white;
+    --head1: #2c3e50;
+    --head2: #2c3e50;
+    --head3: #2c3e50;
+    --paracolor: #444444;
+    --mainbgcolor: white;
+    --imgborder: #444444;
+    --strongemcolor: #2c3e50;
+
+    --maina: ;
+    --mainaactive: ;
+    --mainahover: ;
+    --nava: #bdc3c7;
+    --navaactive: #ecf0f1;
+    --navahover: #95a5a6;
+    --foota: #bdc3c7;
+    --footaactive: #ecf0f1;
+    --footahover: #95a5a6;
+
+}
+
+
+body {
+  margin: 0;
+  background-color: var(--mainbgcolor);
+}
+nav li {
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: var(--navtext);
+  font-family: "Catamaran", sans-serif;
+  font-size: 18pt;
+  font-weight: 20;
+}
+nav ul {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  grid-column: 2;
+  margin: auto;
+  height: 50%;
+  justify-content: space-evenly;
+}
+#navbar {
+  background-color: var(--navbg);
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 60px;
+  position: fixed;
+  top: 0;
+  transition: top 0.3s;
+  width: 100%;
+  z-index: 3;
+}
+.hamburger {
+  grid-column: 1;
+}
+nav img {
+  height: 100%;
+  padding-left: 10px;
+  padding-right:10px;
+  margin-left: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: inline-block;
+  opacity: 0;
+}
+#header-no-nav {
+  background-image: url("images/backgrounds/applepiessitebg.jpg");
+  background-attachment: fixed;
+  background-position: top;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+@keyframes logo_slidein {
+  from {opacity: 0; top: 40px;}
+  to {opacity: 100%; top: 0px;}
+}
+
+#hlogo {
+  height: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  animation-name: logo_slidein;
+  animation-duration: 1.5s;
+  transition: all .2s ease-in-out;
+}
+#hlogo:hover {
+  transform: scale(1.1);
+}
+
+
+main {
+  display: block;
+  width: 60%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 50px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--mainbgcolor);
+}
+main h1 {
+  font-size: 50pt;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: var(--head1);
+  margin: 0;
+  padding: 15px;
+  padding-left: 0;
+  padding-bottom: 0;
+  text-indent: 20px;
+}
+main h2 {
+  font-size: 24pt;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  color: var(--head2);
+  margin: 0;
+  padding: 15px;
+  padding-left: 0;
+  padding-top: 0;
+  text-indent: 25px;
+}
+main p {
+  font-size: 14pt;
+  font-family: "Merriweather", serif;
+  color: var(--paracolor);
+  margin: 0;
+  padding: 15px;
+  text-indent: 2em;
+  line-height: 1.6;
+}
+
+main img {
+  display: block;
+  margin: auto;
+  border-left: solid;
+  border-color: var(--imgborder);
+  border-left-width: 20px;
+}
+main strong {
+  font-style: bold;
+  color: var(--strongemcolor);
+}
+main em {
+  font-style: italic;
+  color: var(--strongemcolor);
+}
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--footbg);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  color: var(--foottext);
+  font-family: "Catamaran", sans-serif;
+  font-size: 12pt;
+}
+footer>* {
+  place-self: center;
+}
+
+main a {color: var(--maina);}
+main a:hover {color: var(--mainahover);}
+main a:active {color: var(--mainaactive);}
+main a:visited {color: var(--maina);}
+nav>ul>li>a {color: var(--nava); text-decoration: none;}
+nav>ul>li>a:hover {color: var(--navahover); text-decoration: none;}
+nav>ul>li>a:active {color: var(--navaactive); text-decoration: none;}
+nav>ul>li>a:visited {color: var(--nava); text-decoration: none;}
+footer a {color: var(--foota); text-decoration: none;}
+footer a:hover {color: var(--footahover); text-decoration: none;}
+footer a:active {color: var(--footaactive); text-decoration: none;}
+footer a:visited {color: var(--foota); text-decoration: none;}
+
+@media only screen and (max-device-width: 600px) {
+  #navbar {
+    height: 8vh;
+  }
+  .navlinks {
+    position: fixed;
+    background: var(--navfootbg);
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+
+    clip-path: circle(10px at 10% 0%);
+    -webkit-clip-path: circle(10px at 10% 0%);
+    transition: all 0.5s ease-out;
+    pointer-events: none;
+
+  }
+  nav li {
+    font-size: 50pt;
+  }
+  .navlinks.open{
+    clip-path: circle(2400px at 10% 0%);
+    -webkit-clip-path: circle(2400px at 10% 0%);
+    pointer-events: all;
+  }
+
+  .line {
+    width: 70%;
+    height: 0.3vh;
+    background: var(--navtext);
+    margin: 0.5vh;
+  }
+  .hamburger {
+    position: relative;
+    top: 40%;
+    left: 10%;
+    transform: translate(-5%, 50%);
+
+    cursor: pointer;
+    z-index: 5;
+    margin-left: 15px;
+  }
+  #header-no-nav {
+    border-top: 8vh solid #160030;
+
+  }
+  main {
+    width: 80%;
+  }
+}
