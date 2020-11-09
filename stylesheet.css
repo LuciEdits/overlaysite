@@ -25,7 +25,13 @@
     --foota: #EBC9CB;
     --footaactive: #ecf0f1;
     --footahover: #E8ADAC;
-}
+
+    --downloadbgcolor: #505C70;
+    --downloadbordercolor: #2c3e50;
+    --downloadbuttoncolor: #F2F2F7;
+    --downloadbuttonborder: #D6D6DB;
+    --downloadtextcolor: white;
+  }
 
 html {
     scroll-behavior: smooth;
@@ -255,6 +261,61 @@ footer a {color: var(--foota); text-decoration: none;}
 footer a:hover {color: var(--footahover); text-decoration: none;}
 footer a:active {color: var(--footaactive); text-decoration: none;}
 footer a:visited {color: var(--foota); text-decoration: none;}
+footer a:visited:hover {color: var(--footahover); text-decoration: none;}
+
+
+
+.packdownload {
+  background-color: var(--downloadbgcolor);
+  border: 2px solid var(--downloadbordercolor);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
+a .packdownload {
+  text-decoration: none;
+}
+.packdownload h1 {
+  font-family: "Catamaran";
+  font-size: 20px;
+  padding: 10px;
+  justify-self: center;
+  color:var(--downloadtextcolor);
+  letter-spacing: 1px;
+  font-weight: lighter;
+  text-decoration: none;
+}
+.packdownload button {
+  background-color: var(--downloadbuttoncolor);
+  border: 2px solid var(--downloadbuttonborder);
+  font-size: 18px;
+  font-family: "Ubuntu";
+  padding: 10px;  
+  justify-self: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-device-width: 600px) {
   #navbar {
@@ -303,13 +364,17 @@ footer a:visited {color: var(--foota); text-decoration: none;}
   }
   #header-no-nav {
     border-top: 8vh solid #160030;
-
   }
   #headermobile {
       display: inline-block;
+      height: 10vh;
+      width: 10vh;
   }
   #headerdesktop {
       display: none;
+  }
+  .scrolldown {
+    display: none;
   }
   main {
     width: 80%;
@@ -325,5 +390,20 @@ footer a:visited {color: var(--foota); text-decoration: none;}
   }
   main h3 {
       font-size: 22pt;
+  }
+  footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--footbg);
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    color: var(--foottext);
+    font-family: "Catamaran", sans-serif;
+    font-size: 12pt;
+    padding: 15px;
+  }
+  footer>* {
+    place-self: center;
   }
 }
