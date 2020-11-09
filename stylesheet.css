@@ -26,8 +26,7 @@
     --footaactive: #ecf0f1;
     --footahover: #E8ADAC;
 
-    --downloadbgcolor: #505C70;
-    --downloadbordercolor: #2c3e50;
+    --downloadbgcolor: #646476;
     --downloadbuttoncolor: #F2F2F7;
     --downloadbuttonborder: #D6D6DB;
     --downloadtextcolor: white;
@@ -270,18 +269,20 @@ footer a:visited:hover {color: var(--footahover); text-decoration: none;}
   border: 2px solid var(--downloadbordercolor);
   border-radius: 15px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 60%;
+  width: 20%;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-
+  padding: 15px;
+  padding-top: 25px;
+  transition-duration: 0.3s;
+  text-decoration: none;
+  border: 2px solid var(--downloadbgcolor);
 }
-a .packdownload {
+a h1 {
   text-decoration: none;
 }
 .packdownload h1 {
@@ -293,17 +294,37 @@ a .packdownload {
   letter-spacing: 1px;
   font-weight: lighter;
   text-decoration: none;
+  text-align: center;
+  text-indent: 0;
 }
-.packdownload button {
-  background-color: var(--downloadbuttoncolor);
+.packdownload img {
+  width: 80%;
+  border: 3px solid white;
+  transition-duration: 0.3s;
+}
+.packdownload:hover {
+  background-color: white;
   border: 2px solid var(--downloadbuttonborder);
-  font-size: 18px;
-  font-family: "Ubuntu";
-  padding: 10px;  
-  justify-self: flex-end;
 }
-
-
+.packdownload:hover img {
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+.packdownload:hover h1 {
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+.packdownload p {
+  opacity: 0;
+  text-indent: 0;
+  position: absolute;
+  font-family: "Catamaran";
+  font-size: 20px;
+}
+.packdownload:hover p {
+  opacity: 1;
+  transition-duration: 0.3s;
+}
 
 
 
