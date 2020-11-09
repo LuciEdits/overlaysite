@@ -30,6 +30,7 @@
     --downloadbuttoncolor: #F2F2F7;
     --downloadbuttonborder: #D6D6DB;
     --downloadtextcolor: white;
+    --downloadauthorcolor: #B4B4D4;
   }
 
 html {
@@ -196,6 +197,7 @@ main h1 {
   padding-left: 0;
   padding-bottom: 0;
   text-indent: 20px;
+  margin-bottom: 10px;
 }
 main h2 {
   font-size: 24pt;
@@ -224,6 +226,7 @@ main img {
   border-left: solid;
   border-color: var(--imgborder);
   border-left-width: 20px;
+  width: 80%;
 }
 main strong {
   font-style: bold;
@@ -268,14 +271,13 @@ footer a:visited:hover {color: var(--footahover); text-decoration: none;}
   background-color: var(--downloadbgcolor);
   border: 2px solid var(--downloadbordercolor);
   border-radius: 15px;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   width: 20%;
   margin: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 30px;
   padding: 15px;
   padding-top: 25px;
   transition-duration: 0.3s;
@@ -289,6 +291,7 @@ a h1 {
   font-family: "Catamaran";
   font-size: 20px;
   padding: 10px;
+  padding-bottom: 5px;
   justify-self: center;
   color:var(--downloadtextcolor);
   letter-spacing: 1px;
@@ -296,6 +299,19 @@ a h1 {
   text-decoration: none;
   text-align: center;
   text-indent: 0;
+}
+.packdownload h2 {
+  font-family: "Catamaran";
+  font-size: 18px;
+  padding: 10px;
+  justify-self: center;
+  color:var(--downloadauthorcolor);
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-align: center;
+  text-indent: 0;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 .packdownload img {
   width: 80%;
@@ -311,6 +327,10 @@ a h1 {
   transition-duration: 0.3s;
 }
 .packdownload:hover h1 {
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+.packdownload:hover h2 {
   opacity: 0;
   transition-duration: 0.3s;
 }
